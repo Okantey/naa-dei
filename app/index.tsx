@@ -3,6 +3,7 @@ import React from "react";
 import Entypo from "@expo/vector-icons/Entypo";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { router } from "expo-router";
 const Index = () => {
   return (
     <View style={styles.parent}>
@@ -24,7 +25,10 @@ const Index = () => {
         Create usable interface and designs @GraphicSpark
       </Text>
 
-      <TouchableOpacity style={styles.hireMeButton}>
+      <TouchableOpacity
+        onPress={() => router.push("/login")}
+        style={styles.hireMeButton}
+      >
         <Text>Hire Me</Text>
       </TouchableOpacity>
 
